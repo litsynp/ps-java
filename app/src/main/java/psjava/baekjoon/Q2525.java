@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 2022.03.04 : 백준 2525 : 오븐 시계
+ * 2022.03.04 - 백준 - #2525 오븐 시계
  */
 public class Q2525 {
 

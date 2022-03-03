@@ -3,7 +3,7 @@ package psjava.baekjoon;
 import java.io.*;
 
 /**
- * 백준 10926 : ??! : 2022.03.04
+ * 2022.03.04 - 백준 - #10926 ??!
  */
 public class Q10926 {
   public static void main(String[] args) throws IOException {

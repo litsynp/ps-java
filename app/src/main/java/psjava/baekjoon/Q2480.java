@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 2022.03.04 : 백준 2480 : 주사위 세개
+ * 2022.03.04 - 백준 - #2480 주사위 세개
  */
 public class Q2480 {
 

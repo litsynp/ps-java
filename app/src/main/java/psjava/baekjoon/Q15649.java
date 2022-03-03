@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 백준 15649 : N과 M (1) : 2022.03.05
+ * 2022.03.05 - 백준 - #15649 N과 M (1)
  */
 public class Q15649 {
 
