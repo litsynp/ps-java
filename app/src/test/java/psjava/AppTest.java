@@ -1,0 +1,4 @@
+package psjava;
+
+class MainTest {
+}
