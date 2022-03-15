@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 2022.03.13 - 백준 - #9251 LCS
+ * 2022.03.14 - 백준 - #9251 LCS
  */
 public class Q9251 {
 
