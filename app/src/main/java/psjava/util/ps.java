@@ -18,6 +18,7 @@ public class ps {
   }
 
   public static void close() throws IOException {
+    bw.write(sb.toString());
     br.close();
     bw.close();
   }
