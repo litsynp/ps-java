@@ -1,8 +1,7 @@
 package psjava.algorithms;
 
 import java.io.*;
-
-import psjava.utils.ps;
+import psjava.util.ps;
 
 /**
  * 최장 공통 부분 수열 (LCS, Longest Common Subsequence)

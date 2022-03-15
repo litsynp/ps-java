@@ -1,4 +1,4 @@
-package psjava.utils;
+package psjava.util;
 
 public class MathUtil {
 

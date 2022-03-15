@@ -1,6 +1,6 @@
 package psjava.algorithms;
 
-import psjava.utils.RandomNumber;
+import psjava.util.RandomNumber;
 
 /**
  * 에라토스테네스의 체
