@@ -29,7 +29,6 @@ public class Q2667 {
       map[i] = Arrays.stream(ps.br.readLine().split("")).mapToInt(Integer::parseInt).toArray();
     }
 
-    int ans = 0;
     for (int i = 0; i < N; i++) {
       for (int j = 0; j < N; j++) {
         // 존재하는 방문한 적 없는 집에 대해서 DFS 실행
