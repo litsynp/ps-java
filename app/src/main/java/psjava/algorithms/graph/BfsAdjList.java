@@ -17,7 +17,7 @@ import psjava.util.*;
 public class BfsAdjList {
 
   static int N, M, V;
-  static ArrayList<ArrayList<Integer>> map = new ArrayList<>();
+  static List<List<Integer>> map = new ArrayList<>();
   static boolean[] visited;
 
   public static void bfs(int start) {
