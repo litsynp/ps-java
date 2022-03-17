@@ -31,5 +31,9 @@ public class Main {
       br.close();
       bw.close();
     }
+
+    public static int[] getIntInputs() throws IOException {
+      return Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+    }
   }
 }
