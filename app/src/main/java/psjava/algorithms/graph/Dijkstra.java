@@ -8,9 +8,11 @@ import psjava.util.ps;
 /**
  * Dijkstra's Algorithm (다익스트라 알고리즘)
  *
- * A에서 B로 가는 최단 경로를 구하는 알고리즘
+ * - A에서 B로 가는 최단 경로를 구하는 알고리즘.
  *
- * A -> V -> B 를 구하고 싶다면, Dijkstra를 여러 번 실행하면 된다.
+ * - 시간 복잡도는 O(|E| log |V|).
+ *
+ * - A -> V -> B 를 구하고 싶다면, Dijkstra를 여러 번 실행하면 된다.
  *
  * Q1753, Q1504, Q9370 참고
  */
