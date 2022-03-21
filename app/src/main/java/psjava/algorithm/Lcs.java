@@ -1,4 +1,4 @@
-package psjava.algorithms;
+package psjava.algorithm;
 
 import java.io.*;
 import psjava.util.ps;

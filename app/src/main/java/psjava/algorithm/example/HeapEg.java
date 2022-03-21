@@ -1,4 +1,4 @@
-package psjava.algorithms.examples;
+package psjava.algorithm.example;
 
 import java.util.*;
 

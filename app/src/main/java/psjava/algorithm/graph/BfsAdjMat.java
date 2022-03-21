@@ -1,4 +1,4 @@
-package psjava.algorithms.graph;
+package psjava.algorithm.graph;
 
 import java.io.*;
 import java.util.*;
@@ -6,26 +6,35 @@ import java.util.*;
 import psjava.util.*;
 
 /**
- * DFS (깊이 우선 탐색, Depth-First Search) - 인접 행렬 방식
+ * BFS (너비 우선 탐색, Breadth-First Search) - 인접 행렬 방식
  *
- * 2차원 배열을 이용해 DFS를 실시한다.
+ * 2차원 배열을 이용해 BFS를 실시한다.
  *
  * https://bbangson.tistory.com/42
  */
-public class DfsAdjMat {
+public class BfsAdjMat {
 
   static int N, M, V;
   static int[][] map;
   static boolean[] visited;
 
-  public static void dfs(int v) {
-    visited[v] = true;
-    ps.sb.append(v).append(" ");
+  public static void bfs(int start) {
+    visited[start] = true;
+    ps.sb.append(start).append(" ");
 
-    for (int i = 1; i < map.length; i++) {
-      // 방문하지 않은 정점이 있는 경우
-      if (map[v][i] == 1 && visited[i] == false) {
-        dfs(i);
+    Queue<Integer> q = new LinkedList<>();
+    q.add(start);
+
+    while (!q.isEmpty()) {
+      int v = q.poll();
+
+      for (int i = 1; i < map.length; i++) {
+        // 방문하지 않은 정점이 있는 경우
+        if (map[v][i] == 1 && visited[i] == false) {
+          q.add(i);
+          visited[i] = true;
+          ps.sb.append(i).append(" ");
+        }
       }
     }
   }
@@ -51,7 +60,7 @@ public class DfsAdjMat {
       map[b][a] = 1;
     }
 
-    dfs(V);
+    bfs(V);
 
     ps.sb.append("\n");
     ps.close();

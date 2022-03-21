@@ -1,4 +1,4 @@
-package psjava.algorithms.graph;
+package psjava.algorithm.graph;
 
 import java.io.*;
 import java.util.*;

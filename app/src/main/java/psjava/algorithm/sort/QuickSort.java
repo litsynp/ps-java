@@ -1,4 +1,4 @@
-package psjava.algorithms.sort;
+package psjava.algorithm.sort;
 
 /**
  * 퀵 정렬 (Quick Sort)
