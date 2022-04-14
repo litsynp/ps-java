@@ -1,4 +1,4 @@
-package psjava.programmers;
+package psjava.programmers.challenges;
 
 import java.util.*;
 
