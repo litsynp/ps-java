@@ -13,7 +13,7 @@ public class Main {
         ps.close();
     }
 
-    static class ps {
+    private static class ps {
 
         public static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         public static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
