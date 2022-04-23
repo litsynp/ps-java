@@ -9,22 +9,15 @@ import java.util.*;
 public class Main {
 
   public static void main(String[] args) throws IOException {
-    ps.init();
 
     ps.close();
   }
 
   static class ps {
 
-    public static BufferedReader br;
-    public static BufferedWriter bw;
-    public static StringBuilder sb;
-
-    public static void init() {
-      br = new BufferedReader(new InputStreamReader(System.in));
-      bw = new BufferedWriter(new OutputStreamWriter(System.out));
-      sb = new StringBuilder();
-    }
+    public static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static final StringBuilder sb = new StringBuilder();
 
     public static void close() throws IOException {
       bw.write(sb.toString());

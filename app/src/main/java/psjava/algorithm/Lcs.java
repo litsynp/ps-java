@@ -41,7 +41,6 @@ public class Lcs {
   }
 
   public static void main(String[] args) throws IOException {
-    ps.init();
 
     String s1 = ps.br.readLine().strip();
     String s2 = ps.br.readLine().strip();

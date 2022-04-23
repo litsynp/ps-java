@@ -9,7 +9,6 @@ public class pst {
   public static void init() {
     tu = new TimeUtil();
     tu.start();
-    ps.init();
   }
 
   public static void close() throws IOException {

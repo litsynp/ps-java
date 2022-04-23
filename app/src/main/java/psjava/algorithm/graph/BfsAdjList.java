@@ -43,7 +43,6 @@ public class BfsAdjList {
   }
 
   public static void main(String[] args) throws IOException {
-    ps.init();
 
     int[] in = Arrays.stream(ps.br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
     N = in[0];

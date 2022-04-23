@@ -8,23 +8,17 @@ import java.util.*;
  */
 public class ps {
 
-  public static BufferedReader br;
-  public static BufferedWriter bw;
-  public static StringBuilder sb;
+    public static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static final StringBuilder sb = new StringBuilder();
 
-  public static void init() {
-    br = new BufferedReader(new InputStreamReader(System.in));
-    bw = new BufferedWriter(new OutputStreamWriter(System.out));
-    sb = new StringBuilder();
-  }
+    public static void close() throws IOException {
+        bw.write(sb.toString());
+        br.close();
+        bw.close();
+    }
 
-  public static void close() throws IOException {
-    bw.write(sb.toString());
-    br.close();
-    bw.close();
-  }
-
-  public static int[] getIntInputs() throws IOException {
-    return Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-  }
+    public static int[] getIntInputs() throws IOException {
+        return Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+    }
 }

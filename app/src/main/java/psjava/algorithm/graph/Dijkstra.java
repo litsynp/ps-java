@@ -24,7 +24,6 @@ public class Dijkstra {
   static final int MAX_VAL = (int) 1e9;
 
   public static void main(String[] args) throws IOException {
-    ps.init();
     {
       int[] in = ps.getIntInputs();
       N = in[0];

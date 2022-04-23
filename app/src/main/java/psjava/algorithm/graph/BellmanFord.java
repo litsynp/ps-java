@@ -50,7 +50,6 @@ public class BellmanFord {
   static final int INF = Integer.MAX_VALUE;
 
   public static void main(String[] args) throws IOException {
-    ps.init();
     {
       int[] in = ps.getIntInputs();
       N = in[0];

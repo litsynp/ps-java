@@ -25,7 +25,6 @@ public class FloydWarshall {
   static final int INF = (int) 1e9;
 
   public static void main(String[] args) throws IOException {
-    ps.init();
 
     N = Integer.parseInt(ps.br.readLine());
     M = Integer.parseInt(ps.br.readLine());
