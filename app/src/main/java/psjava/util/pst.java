@@ -4,10 +4,9 @@ import java.io.*;
 
 public class pst {
 
-    public static TimeUtil tu;
+    public static final TimeUtil tu = new TimeUtil();
 
     public static void init() {
-        tu = new TimeUtil();
         tu.start();
     }
 
