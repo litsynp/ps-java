@@ -13,47 +13,47 @@ import java.util.*;
  */
 public class SetEg {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    // TreeSet 생성
-    TreeSet<String> ts = new TreeSet<>();
+        // TreeSet 생성
+        TreeSet<String> ts = new TreeSet<>();
 
-    // TreeSet에 요소 추가 -- TreeSet은 순서 유지
-    ts.add("apple");
-    ts.add("banana");
-    ts.add("strawberry");
+        // TreeSet에 요소 추가 -- TreeSet은 순서 유지
+        ts.add("apple");
+        ts.add("banana");
+        ts.add("strawberry");
 
-    // 정렬된 순서로 출력
-    System.out.println("Sorted TreeSet:");
-    for (String s : ts) {
-      System.out.println(s);
+        // 정렬된 순서로 출력
+        System.out.println("Sorted TreeSet:");
+        for (String s : ts) {
+            System.out.println(s);
+        }
+
+        // TreeSet을 HashSet으로 변경
+        HashSet<String> hs = new HashSet<>(ts);
+
+        // 정렬하지 않은 채 출력
+        System.out.println("Unsorted HashSet:");
+        for (String s : hs) {
+            System.out.println(s);
+        }
+
+        // 요소 삭제
+        Iterator<String> it = hs.iterator();
+        while (it.hasNext()) {
+            // 요소 조회
+            String e = it.next();
+
+            // 조건에 맞는 요소 삭제
+            if (e.length() % 2 == 0) {
+                it.remove();
+            }
+        }
+
+        // 삭제 후 출력
+        System.out.println("Set after some elements removed:");
+        for (String s : hs) {
+            System.out.println(s);
+        }
     }
-
-    // TreeSet을 HashSet으로 변경
-    HashSet<String> hs = new HashSet<>(ts);
-
-    // 정렬하지 않은 채 출력
-    System.out.println("Unsorted HashSet:");
-    for (String s : hs) {
-      System.out.println(s);
-    }
-
-    // 요소 삭제
-    Iterator<String> it = hs.iterator();
-    while (it.hasNext()) {
-      // 요소 조회
-      String e = it.next();
-
-      // 조건에 맞는 요소 삭제
-      if (e.length() % 2 == 0) {
-        it.remove();
-      }
-    }
-
-    // 삭제 후 출력
-    System.out.println("Set after some elements removed:");
-    for (String s : hs) {
-      System.out.println(s);
-    }
-  }
 }

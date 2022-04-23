@@ -44,86 +44,86 @@ import psjava.util.ps;
  */
 public class BellmanFord {
 
-  static int N, E;
-  static List<Edge> graph;
-  static long[] dist; // long으로 안하면 음수 사이클 발생시 underflow 때문에 출력 오류 날 수 있음
-  static final int INF = Integer.MAX_VALUE;
+    static int N, E;
+    static List<Edge> graph;
+    static long[] dist; // long으로 안하면 음수 사이클 발생시 underflow 때문에 출력 오류 날 수 있음
+    static final int INF = Integer.MAX_VALUE;
 
-  public static void main(String[] args) throws IOException {
-    {
-      int[] in = ps.getIntInputs();
-      N = in[0];
-      E = in[1];
-    }
+    public static void main(String[] args) throws IOException {
+        {
+            int[] in = ps.getIntInputs();
+            N = in[0];
+            E = in[1];
+        }
 
-    // 최단거리 테이블 초기화
-    dist = new long[N + 1];
-    Arrays.fill(dist, INF);
+        // 최단거리 테이블 초기화
+        dist = new long[N + 1];
+        Arrays.fill(dist, INF);
 
-    graph = new ArrayList<>();
+        graph = new ArrayList<>();
 
-    for (int i = 0; i < E; i++) {
-      int[] in = ps.getIntInputs();
-      int u = in[0];
-      int v = in[1];
-      int w = in[2];
+        for (int i = 0; i < E; i++) {
+            int[] in = ps.getIntInputs();
+            int u = in[0];
+            int v = in[1];
+            int w = in[2];
 
-      // graph에 모든 간선 등록
-      graph.add(new Edge(u, v, w));
-    }
+            // graph에 모든 간선 등록
+            graph.add(new Edge(u, v, w));
+        }
 
-    // 벨만 포드 알고리즘 실행 (true: 음수 사이클 존재, false: 음수 사이클 존재 X)
-    if (bellmanFord(1)) {
-      ps.sb.append(-1).append("\n");
-    } else {
-      // 1번 노드를 제외한 다른 모든 노드로 가기 위한 최단 거리 출력
-      for (int i = 2; i < N + 1; i++) {
-        if (dist[i] == INF) {
-          ps.sb.append(-1).append("\n");
+        // 벨만 포드 알고리즘 실행 (true: 음수 사이클 존재, false: 음수 사이클 존재 X)
+        if (bellmanFord(1)) {
+            ps.sb.append(-1).append("\n");
         } else {
-          ps.sb.append(dist[i]).append("\n");
-        }
-      }
-    }
-
-    ps.close();
-  }
-
-  public static boolean bellmanFord(int start) {
-    dist[start] = 0;
-
-    // 정점의 수만큼 반복 (음수 간선 순환 체크 안하려면 N-1 번 반복)
-    for (int i = 1; i <= N; i++) {
-
-      // 매 반복마다 모든 간선 확인
-      for (Edge now : graph) {
-        if (dist[now.u] == INF) {
-          continue;
+            // 1번 노드를 제외한 다른 모든 노드로 가기 위한 최단 거리 출력
+            for (int i = 2; i < N + 1; i++) {
+                if (dist[i] == INF) {
+                    ps.sb.append(-1).append("\n");
+                } else {
+                    ps.sb.append(dist[i]).append("\n");
+                }
+            }
         }
 
-        // 현재 간선을 거쳐서 다른 노드로 이동하는 거리가 짧은 경우
-        long cost = dist[now.u] + now.cost;
-        if (dist[now.v] > cost) {
-          dist[now.v] = cost;
+        ps.close();
+    }
 
-          // n번째 라운드에서 값이 갱신된다면 음수 순환 존재
-          if (i == N) {
-            return true;
-          }
+    public static boolean bellmanFord(int start) {
+        dist[start] = 0;
+
+        // 정점의 수만큼 반복 (음수 간선 순환 체크 안하려면 N-1 번 반복)
+        for (int i = 1; i <= N; i++) {
+
+            // 매 반복마다 모든 간선 확인
+            for (Edge now : graph) {
+                if (dist[now.u] == INF) {
+                    continue;
+                }
+
+                // 현재 간선을 거쳐서 다른 노드로 이동하는 거리가 짧은 경우
+                long cost = dist[now.u] + now.cost;
+                if (dist[now.v] > cost) {
+                    dist[now.v] = cost;
+
+                    // n번째 라운드에서 값이 갱신된다면 음수 순환 존재
+                    if (i == N) {
+                        return true;
+                    }
+                }
+            }
         }
-      }
+
+        return false;
     }
 
-    return false;
-  }
+    public static class Edge {
+        int u, v, cost;
 
-  public static class Edge {
-    int u, v, cost;
-
-    Edge(int u, int v, int cost) {
-      this.u = u;
-      this.v = v;
-      this.cost = cost;
+        Edge(int u, int v, int cost) {
+            this.u = u;
+            this.v = v;
+            this.cost = cost;
+        }
     }
-  }
 }

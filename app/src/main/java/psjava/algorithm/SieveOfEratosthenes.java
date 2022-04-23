@@ -25,37 +25,37 @@ import psjava.util.RandomNumber;
  */
 public class SieveOfEratosthenes {
 
-  /** 입력값의 범위 (최대값) */
-  public static int N;
+    /** 입력값의 범위 (최대값) */
+    public static int N;
 
-  /** 에라토스테네스의 체 -- false면 소수 */
-  public static boolean sieve[];
+    /** 에라토스테네스의 체 -- false면 소수 */
+    public static boolean sieve[];
 
-  public static void main(String[] args) {
-    N = 100;
-    sieve = new boolean[N + 1];
+    public static void main(String[] args) {
+        N = 100;
+        sieve = new boolean[N + 1];
 
-    // 에라토스테네스의 체로 소수를 걸러낸다.
-    sift();
+        // 에라토스테네스의 체로 소수를 걸러낸다.
+        sift();
 
-    for (int i = 0; i < 10; i++) {
-      int n = RandomNumber.getRandomNumber(2, 100);
-      System.out.printf("%d is " + (sieve[n] ? "not " : "") + "a prime.\n", n);
-    }
-  }
-
-  public static void sift() {
-    // 소수는 false
-    // 0, 1은 소수에서 제외
-    sieve[0] = sieve[1] = true;
-
-    for (int i = 2; i * i <= N; i++) {
-      // i가 소수면 i의 배수 j는 소수가 아니다.
-      if (!sieve[i]) {
-        for (int j = i * i; j <= N; j += i) {
-          sieve[j] = true;
+        for (int i = 0; i < 10; i++) {
+            int n = RandomNumber.getRandomNumber(2, 100);
+            System.out.printf("%d is " + (sieve[n] ? "not " : "") + "a prime.\n", n);
         }
-      }
     }
-  }
+
+    public static void sift() {
+        // 소수는 false
+        // 0, 1은 소수에서 제외
+        sieve[0] = sieve[1] = true;
+
+        for (int i = 2; i * i <= N; i++) {
+            // i가 소수면 i의 배수 j는 소수가 아니다.
+            if (!sieve[i]) {
+                for (int j = i * i; j <= N; j += i) {
+                    sieve[j] = true;
+                }
+            }
+        }
+    }
 }

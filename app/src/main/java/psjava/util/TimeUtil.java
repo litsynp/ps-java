@@ -7,22 +7,22 @@ import java.time.*;
  */
 public class TimeUtil {
 
-  private Instant start;
-  private Instant end;
+    private Instant start;
+    private Instant end;
 
-  public void start() {
-    start = Instant.now();
-  }
+    public void start() {
+        start = Instant.now();
+    }
 
-  public void end() {
-    end = Instant.now();
-  }
+    public void end() {
+        end = Instant.now();
+    }
 
-  public long getDurationMs() {
-    return Duration.between(start, end).toMillis();
-  }
+    public long getDurationMs() {
+        return Duration.between(start, end).toMillis();
+    }
 
-  public void printDurationMs() {
-    System.out.println("Took " + getDurationMs() + " ms");
-  }
+    public void printDurationMs() {
+        System.out.println("Took " + getDurationMs() + " ms");
+    }
 }

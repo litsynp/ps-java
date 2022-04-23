@@ -20,63 +20,63 @@ import psjava.util.*;
  */
 public class FloydWarshall {
 
-  static int N, M;
-  static int[][] graph;
-  static final int INF = (int) 1e9;
+    static int N, M;
+    static int[][] graph;
+    static final int INF = (int) 1e9;
 
-  public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-    N = Integer.parseInt(ps.br.readLine());
-    M = Integer.parseInt(ps.br.readLine());
+        N = Integer.parseInt(ps.br.readLine());
+        M = Integer.parseInt(ps.br.readLine());
 
-    graph = new int[N + 1][N + 1];
+        graph = new int[N + 1][N + 1];
 
-    // INF로 초기화
-    for (int[] row : graph) {
-      Arrays.fill(row, INF);
-    }
-
-    // 자기 자신으로 가는 비용은 0으로 초기화
-    for (int i = 1; i <= N; i++) {
-      for (int j = 1; j <= N; j++) {
-        if (i == j) {
-          graph[i][j] = 0;
+        // INF로 초기화
+        for (int[] row : graph) {
+            Arrays.fill(row, INF);
         }
-      }
-    }
 
-    for (int i = 0; i < M; i++) {
-      int[] in = ps.getIntInputs();
-      int a = in[0];
-      int b = in[1];
-      int c = in[2];
-
-      graph[a][b] = c;
-    }
-
-    floydWarshall();
-
-    for (int i = 1; i <= N; i++) {
-      for (int j = 1; j <= N; j++) {
-        if (graph[i][j] == INF) {
-          ps.sb.append("INF ");
-        } else {
-          ps.sb.append(graph[i][j]).append(" ");
+        // 자기 자신으로 가는 비용은 0으로 초기화
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N; j++) {
+                if (i == j) {
+                    graph[i][j] = 0;
+                }
+            }
         }
-      }
-      ps.sb.append("\n");
-    }
 
-    ps.close();
-  }
+        for (int i = 0; i < M; i++) {
+            int[] in = ps.getIntInputs();
+            int a = in[0];
+            int b = in[1];
+            int c = in[2];
 
-  private static void floydWarshall() {
-    for (int k = 1; k <= N; k++) {
-      for (int a = 1; a <= N; a++) {
-        for (int b = 1; b <= N; b++) {
-          graph[a][b] = Math.min(graph[a][b], graph[a][k] + graph[k][b]);
+            graph[a][b] = c;
         }
-      }
+
+        floydWarshall();
+
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= N; j++) {
+                if (graph[i][j] == INF) {
+                    ps.sb.append("INF ");
+                } else {
+                    ps.sb.append(graph[i][j]).append(" ");
+                }
+            }
+            ps.sb.append("\n");
+        }
+
+        ps.close();
     }
-  }
+
+    private static void floydWarshall() {
+        for (int k = 1; k <= N; k++) {
+            for (int a = 1; a <= N; a++) {
+                for (int b = 1; b <= N; b++) {
+                    graph[a][b] = Math.min(graph[a][b], graph[a][k] + graph[k][b]);
+                }
+            }
+        }
+    }
 }
