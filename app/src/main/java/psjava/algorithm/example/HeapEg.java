@@ -28,7 +28,7 @@ public class HeapEg {
         pq.add(new Item(4, 8));
         pq.add(new Item(1, 1));
 
-        if (pq.size() != 0) {
+        if (!pq.isEmpty()) {
             // Poll & peek (조회하면서 삭제)
             Item item = pq.poll();
             System.out.println("(" + item.v1 + ", " + item.v2 + ") 삭제");
