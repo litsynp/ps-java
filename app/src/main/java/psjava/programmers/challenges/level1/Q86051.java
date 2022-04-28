@@ -1,4 +1,4 @@
-package psjava.programmers.challenges;
+package psjava.programmers.challenges.level1;
 
 /**
  * 2022.03.23 - 프로그래머스 - #86051 없는 숫자 더하기

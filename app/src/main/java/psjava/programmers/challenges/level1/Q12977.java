@@ -1,4 +1,4 @@
-package psjava.programmers.challenges;
+package psjava.programmers.challenges.level1;
 
 /**
  * 2022.03.23 - 프로그래머스 - #12977 소수 만들기

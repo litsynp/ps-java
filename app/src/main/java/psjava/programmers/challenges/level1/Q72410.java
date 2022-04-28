@@ -1,4 +1,4 @@
-package psjava.programmers.challenges;
+package psjava.programmers.challenges.level1;
 
 /**
  * 2022.03.22 - 프로그래머스 - #72410 신규 아이디 추천
