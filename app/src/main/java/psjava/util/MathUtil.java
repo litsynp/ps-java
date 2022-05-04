@@ -7,4 +7,17 @@ public class MathUtil {
         int scale = (int) Math.pow(10, precision);
         return (double) Math.round(value * scale) / scale;
     }
+
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+
+        for (int div = 2; div * div < n; div++) {
+            if (n % div == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

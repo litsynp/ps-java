@@ -22,14 +22,18 @@ import psjava.util.RandomNumber;
  * 3. 2부터 차례대로 소수인 n의 배수를 모두 제거
  *
  * 4. 주어진 범위가 k라면 √k보다 작은 소수들에 한하여 3.의 과정 반복
+ *
+ * [NOTE]
+ * * 배열에는 int 말고 다른 것을 사용하기 어려움
+ * -> int 범위를 넘어간다면, 평범한 `isPrime()`을 사용할 것 (참고: Q92335)
  */
 public class SieveOfEratosthenes {
 
     /** 입력값의 범위 (최대값) */
-    public static int N;
+    private static int N;
 
     /** 에라토스테네스의 체 -- false면 소수 */
-    public static boolean sieve[];
+    private static boolean[] sieve;
 
     public static void main(String[] args) {
         N = 100;
@@ -40,11 +44,11 @@ public class SieveOfEratosthenes {
 
         for (int i = 0; i < 10; i++) {
             int n = RandomNumber.getRandomNumber(2, 100);
-            System.out.printf("%d is " + (sieve[n] ? "not " : "") + "a prime.\n", n);
+            System.out.printf("%d is %s a prime.%n", n, (sieve[n] ? "not " : ""));
         }
     }
 
-    public static void sift() {
+    private static void sift() {
         // 소수는 false
         // 0, 1은 소수에서 제외
         sieve[0] = sieve[1] = true;
