@@ -20,4 +20,21 @@ public class MathUtil {
         }
         return true;
     }
+
+    /** 재귀를 이용한 팩토리얼 n! */
+    public static int factorialRecur(int n) {
+        if (n == 1) {
+            return 1;
+        }
+
+        return n * factorialRecur(n - 1);
+    }
+
+    /** 반복문을 이용한 팩토리얼 n! */
+    public static int factorialIter(int n) {
+        for (int i = n - 1; i >= 1; i--) {
+            n *= i;
+        }
+        return n;
+    }
 }
