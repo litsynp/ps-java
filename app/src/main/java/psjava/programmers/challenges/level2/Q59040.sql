@@ -1,0 +1,12 @@
+-- 2022.05.13 - 프로그래머스 - #59040 고양이와 개는 몇 마리 있을까
+SELECT
+  ANIMAL_TYPE,
+  COUNT(1) AS count
+FROM
+  ANIMAL_INS
+WHERE
+  ANIMAL_TYPE in ('Cat', 'Dog')
+GROUP BY
+  ANIMAL_TYPE
+ORDER BY
+  ANIMAL_TYPE;
