@@ -1,0 +1,8 @@
+-- 2022.05.15 - 프로그래머스 - #59035 역순 정렬하기
+SELECT
+  NAME,
+  DATETIME
+FROM
+  ANIMAL_INS
+ORDER BY
+  ANIMAL_ID DESC;
