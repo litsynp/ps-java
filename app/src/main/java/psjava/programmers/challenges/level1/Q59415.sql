@@ -1,0 +1,5 @@
+-- 2022.05.15 - 프로그래머스 - #59415 최댓값 구하기
+SELECT
+  MAX(DATETIME) AS "시간"
+FROM
+  ANIMAL_INS;
