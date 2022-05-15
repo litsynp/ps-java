@@ -1,0 +1,5 @@
+-- 2022.05.15 - 프로그래머스 - #59038 최솟값 구하기
+SELECT
+  MIN(DATETIME)
+FROM
+  ANIMAL_INS;
