@@ -37,3 +37,6 @@ build
 
 # bin
 /app/bin/*
+
+# MacOS
+.DS_Store
