@@ -7,13 +7,13 @@ import psjava.util.ps;
 
 /**
  * Dijkstra's Algorithm (다익스트라 알고리즘)
- *
+ * <p>
  * - A에서 B로 가는 최단 경로를 구하는 알고리즘.
- *
+ * <p>
  * - 시간 복잡도는 O(|E| log |V|).
- *
+ * <p>
  * - A -> V -> B 를 구하고 싶다면, Dijkstra를 여러 번 실행하면 된다.
- *
+ * <p>
  * Q1753, Q1504, Q9370 참고
  */
 public class Dijkstra {
@@ -25,9 +25,9 @@ public class Dijkstra {
 
     public static void main(String[] args) throws IOException {
         {
-            int[] in = ps.getIntInputs();
-            N = in[0];
-            E = in[1];
+            ps.nextLine();
+            N = ps.stoi(ps.st.nextToken());
+            E = ps.stoi(ps.st.nextToken());
 
             for (int i = 0; i < N + 1; i++) {
                 graph.add(new ArrayList<>());
@@ -35,10 +35,10 @@ public class Dijkstra {
         }
 
         for (int i = 0; i < E; i++) {
-            int[] in = ps.getIntInputs();
-            int a = in[0];
-            int b = in[1];
-            int c = in[2];
+            ps.nextLine();
+            int a = ps.stoi(ps.st.nextToken());
+            int b = ps.stoi(ps.st.nextToken());
+            int c = ps.stoi(ps.st.nextToken());
 
             // 양방향 이동
             graph.get(a).add(new Node(b, c));

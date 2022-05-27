@@ -7,15 +7,15 @@ import psjava.util.*;
 
 /**
  * Floyd-Warshall Algorithm (플로이드-워셜 알고리즘)
- *
+ * <p>
  * 그래프에서 가능한 모든 노드 쌍에 대해 최단 거리를 구하는 알고리즘이다.
- *
+ * <p>
  * D_ab = min(D_ab, D_ak + D_kb)
- *
+ * <p>
  * - a, b, k에 대해서 N번 반복하므로, O(N^3) 의 시간 복잡도를 갖는다.
- *
+ * <p>
  * - N:N일 때 Dijkstra's가 아닌 FW를 사용하면 좋다.
- *
+ * <p>
  * BJ #11404 참고
  */
 public class FloydWarshall {
@@ -46,10 +46,10 @@ public class FloydWarshall {
         }
 
         for (int i = 0; i < M; i++) {
-            int[] in = ps.getIntInputs();
-            int a = in[0];
-            int b = in[1];
-            int c = in[2];
+            ps.nextLine();
+            int a = ps.stoi(ps.st.nextToken());
+            int b = ps.stoi(ps.st.nextToken());
+            int c = ps.stoi(ps.st.nextToken());
 
             graph[a][b] = c;
         }

@@ -7,39 +7,39 @@ import psjava.util.ps;
 
 /**
  * Bellman-Ford Algorithm (벨만-포드 알고리즘)
- *
+ * <p>
  * 음수 간선이 포함된 상황에서의 최단 거리 문제를 풀 때 사용한다.
- *
+ * <p>
  * 또한, 음수 간선의 순환을 탐지할 수 있다.
- *
+ * <p>
  * 시간 복잡도는 O(VE).
- *
+ * <p>
  * - Dijkstra's algorithm과 달리 음수의 경로값에도 사용 가능하다.
- *
+ * <p>
  * - 음의 값이 누적되는 음수 사이클이 존재하면 의미 없는 값을 반환한다.
- *
+ * <p>
  * d[T] <= d[S] + w(S, T)
- *
+ * <p>
  * - d: 시작점에서 해당 정점의 거리
- *
+ * <p>
  * - T: 해당 간선이 도달하고자 하는 정점
- *
+ * <p>
  * - S: 해당 간선의 시작점
- *
+ * <p>
  * - w: 해당 간선의 가중치
- *
+ * <p>
  * [음수 사이클 판단]
- *
+ * <p>
  * - e.g.) 정점의 개수 = 4 : 최단 경로는 최대 3의 크기를 가진다.
- *
+ * <p>
  * - 정점의 개수가 N인 경우, 최단 경로의 크기는 최대 |N| - 1이 된다.
- *
+ * <p>
  * - 즉, 사이클을 순환하여, 최단 경로 크기가 커지는 것을 제한한다.
- *
+ * <p>
  * https://loosie.tistory.com/162
- *
+ * <p>
  * https://sorjfkrh5078.tistory.com/30
- *
+ * <p>
  * * 예시는 BJ Q11657.
  */
 public class BellmanFord {
@@ -51,9 +51,9 @@ public class BellmanFord {
 
     public static void main(String[] args) throws IOException {
         {
-            int[] in = ps.getIntInputs();
-            N = in[0];
-            E = in[1];
+            ps.nextLine();
+            N = ps.stoi(ps.st.nextToken());
+            E = ps.stoi(ps.st.nextToken());
         }
 
         // 최단거리 테이블 초기화
@@ -63,10 +63,10 @@ public class BellmanFord {
         graph = new ArrayList<>();
 
         for (int i = 0; i < E; i++) {
-            int[] in = ps.getIntInputs();
-            int u = in[0];
-            int v = in[1];
-            int w = in[2];
+            ps.nextLine();
+            int u = ps.stoi(ps.st.nextToken());
+            int v = ps.stoi(ps.st.nextToken());
+            int w = ps.stoi(ps.st.nextToken());
 
             // graph에 모든 간선 등록
             graph.add(new Edge(u, v, w));
