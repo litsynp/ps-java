@@ -5,12 +5,12 @@ package psjava.programmers.challenges.level2;
  * <p>
  * LEVEL 2
  * <p>
- * 2018 KAKAO BLIND RECRUITMENT
- * <p>
  * 구현
+ * <p>
+ * 2018 KAKAO BLIND RECRUITMENT
  *
- * @see https://programmers.co.kr/learn/courses/30/lessons/17679
- * @see https://velog.io/@hyeon930/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%84%EB%A0%8C%EC%A6%884%EB%B8%94%EB%A1%9D-Java
+ * @see <a href="https://programmers.co.kr/learn/courses/30/lessons/17679">https://programmers.co.kr/learn/courses/30/lessons/17679</a>
+ * @see <a href="https://velog.io/@hyeon930/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%84%EB%A0%8C%EC%A6%884%EB%B8%94%EB%A1%9D-Java">https://velog.io/@hyeon930/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%94%84%EB%A0%8C%EC%A6%884%EB%B8%94%EB%A1%9D-Java</a>
  */
 public class Q17679 {
 

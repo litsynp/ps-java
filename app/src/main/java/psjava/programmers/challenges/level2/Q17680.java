@@ -7,11 +7,11 @@ import java.util.*;
  * <p>
  * LEVEL 2
  * <p>
- * 2018 KAKAO BLIND RECRUITMENT
- * <p>
  * 자료구조
+ * <p>
+ * 2018 KAKAO BLIND RECRUITMENT
  *
- * @see https://programmers.co.kr/learn/courses/30/lessons/17680
+ * @see <a href="https://programmers.co.kr/learn/courses/30/lessons/17680">https://programmers.co.kr/learn/courses/30/lessons/17680</a>
  */
 public class Q17680 {
 

@@ -4,14 +4,15 @@ import java.util.*;
 import java.util.regex.*;
 
 /**
- * 2022.06.02 - 프로그래머스 - #17686 [3차] 자동완성
+ * 2022.06.02 - 프로그래머스 - #17686 [3차] 파일명 정렬
  * <p>
  * LEVEL 2
  * <p>
  * 문자열
  * <p>
+ * 2018 KAKAO BLIND RECRUITMENT
  *
- * @see <a href="https://programmers.co.kr/learn/courses/30/lessons/17685">https://programmers.co.kr/learn/courses/30/lessons/17685</a>
+ * @see <a href="https://programmers.co.kr/learn/courses/30/lessons/17686">https://programmers.co.kr/learn/courses/30/lessons/17686</a>
  */
 public class Q17686 {
 
