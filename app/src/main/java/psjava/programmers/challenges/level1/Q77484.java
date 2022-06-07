@@ -4,6 +4,12 @@ import java.util.*;
 
 /**
  * 2022.03.22 - 프로그래머스 - #77484 로또의 최고 순위와 최저 순위
+ * <p>
+ * LEVEL 1
+ * <p>
+ * 2021 Dev-Matching: 웹 백엔드 개발자(상반기)
+ *
+ * @see <a href=https://programmers.co.kr/learn/courses/30/lessons/77484">https://programmers.co.kr/learn/courses/30/lessons/77484</a>
  */
 public class Q77484 {
 
@@ -38,6 +44,6 @@ public class Q77484 {
             l = 6;
         }
 
-        return new int[] { h, l };
+        return new int[]{h, l};
     }
 }
